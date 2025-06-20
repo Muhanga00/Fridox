@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>📝 Fridox - Create Document</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="form-area">
+    <h1>📝 Fridox Document Creator</h1>
+
+    <label>Upload Logo:</label>
+    <input type="file" id="logoInput" accept="image/*" />
+
+    <label>Document Head (Main Title):</label>
+    <input type="text" id="docHead" placeholder="e.g. TTC Muhanga" />
+
+    <label>Subheading (Optional):</label>
+    <input type="text" id="subHead" placeholder="e.g. Official Document" />
+
+    <label>Document Body:</label>
+    <textarea id="docBody" rows="10" placeholder="Type your full document here..."></textarea>
+
+    <label>Date:</label>
+    <input type="text" id="docDate" placeholder="e.g. June 20, 2025" />
+
+    <label>Signature:</label>
+    <input type="text" id="docSignature" placeholder="e.g. Tuyizere Jean Bosco" />
+
+    <button onclick="generatePDF()">📥 Download PDF</button>
+  </div>
+
+  <div id="outputContainer" style="display: none;">
+    <div id="pdfDocument" class="a4-page"></div>
+  </div>
+
+  <!-- html2pdf.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
